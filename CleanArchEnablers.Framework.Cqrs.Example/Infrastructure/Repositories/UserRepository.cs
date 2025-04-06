@@ -1,6 +1,8 @@
 using CleanArchEnablers.Framework.Cqrs.Example.Domain.Entities;
+using CleanArchEnablers.Framework.Cqrs.Example.Domain.Entities.Factories;
 using CleanArchEnablers.Framework.Cqrs.Example.Infrastructure.Context;
 using CleanArchEnablers.Framework.Cqrs.Example.Infrastructure.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchEnablers.Framework.Cqrs.Example.Infrastructure.Repositories.Implementation;
 
@@ -23,5 +25,19 @@ public class UserRepository(DatabaseContext context) : IUserRepository
         await _context.SaveChangesAsync();
 
         return entity;
+    }
+
+    public async Task<List<UserDomainEntity>> FetchUserAsync(CancellationToken cancellationToken)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+
+        return await _context.Users
+            .Select(u => MapUserToDomainEntity(u))
+            .ToListAsync(cancellationToken: cancellationToken);
+    }
+
+    private UserDomainEntity MapUserToDomainEntity(UserEntity u)
+    {
+        return UserDomainEntityFactory.CreateInstance(u.Email, u.Password, u.Id, u.IsBlocked);
     }
 }
