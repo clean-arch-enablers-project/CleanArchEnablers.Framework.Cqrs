@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchEnablers.Framework.Cqrs", "CleanArchEnablers.Framework.Cqrs\CleanArchEnablers.Framework.Cqrs.csproj", "{126AE42A-A65E-40D8-A98A-A0C79D47D59C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchEnablers.Framework.Cqrs.Example", "CleanArchEnablers.Framework.Cqrs.Example\CleanArchEnablers.Framework.Cqrs.Example.csproj", "{39CDD5E4-8451-452B-98A8-E01AB9CE594D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchEnablers.Framework.Cqrs.Tests", "CleanArchEnablers.Framework.Cqrs.Tests\CleanArchEnablers.Framework.Cqrs.Tests.csproj", "{C3BCBEBC-AC5C-4F7D-B4C2-F26032AC7A81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{126AE42A-A65E-40D8-A98A-A0C79D47D59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{126AE42A-A65E-40D8-A98A-A0C79D47D59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{126AE42A-A65E-40D8-A98A-A0C79D47D59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{126AE42A-A65E-40D8-A98A-A0C79D47D59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CDD5E4-8451-452B-98A8-E01AB9CE594D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CDD5E4-8451-452B-98A8-E01AB9CE594D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CDD5E4-8451-452B-98A8-E01AB9CE594D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CDD5E4-8451-452B-98A8-E01AB9CE594D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BCBEBC-AC5C-4F7D-B4C2-F26032AC7A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BCBEBC-AC5C-4F7D-B4C2-F26032AC7A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BCBEBC-AC5C-4F7D-B4C2-F26032AC7A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BCBEBC-AC5C-4F7D-B4C2-F26032AC7A81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
