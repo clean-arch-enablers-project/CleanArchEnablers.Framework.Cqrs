@@ -91,6 +91,6 @@ public class UserController(IQueryDispatcher queryDispatcher)
 <br>
 <br>
 
-<center>
+<p align="center">
     CAE — Clean Architecture made easy.
-</center>
+</p>
