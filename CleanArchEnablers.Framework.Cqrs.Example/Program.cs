@@ -12,6 +12,9 @@ public class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+        
+        // Adding CaeCqrs on Asp Pipeline
+        builder.Services.AddCaeCqrs();
 
         var app = builder.Build();
 
