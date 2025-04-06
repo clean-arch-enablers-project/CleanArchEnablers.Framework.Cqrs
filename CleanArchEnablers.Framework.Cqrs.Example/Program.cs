@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace CleanArchEnablers.Framework.Cqrs.Example;
 
 public class Program
@@ -14,7 +16,7 @@ public class Program
         builder.Services.AddSwaggerGen();
         
         // Adding CaeCqrs on Asp Pipeline
-        builder.Services.AddCaeCqrs();
+        builder.Services.AddCaeCqrs(Assembly.GetExecutingAssembly());
 
         var app = builder.Build();
 
