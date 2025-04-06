@@ -1,4 +1,8 @@
 using System.Reflection;
+using CleanArchEnablers.Framework.Cqrs.Example.Infrastructure.Context;
+using CleanArchEnablers.Framework.Cqrs.Example.Infrastructure.Repositories;
+using CleanArchEnablers.Framework.Cqrs.Example.Infrastructure.Repositories.Implementation;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchEnablers.Framework.Cqrs.Example;
 
@@ -9,7 +13,10 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-
+        builder.Services.AddDbContext<DatabaseContext>(options =>
+        {
+            options.UseInMemoryDatabase("InMemoryDb");
+        });
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
@@ -17,6 +24,9 @@ public class Program
         
         // Adding CaeCqrs on Asp Pipeline
         builder.Services.AddCaeCqrs(Assembly.GetExecutingAssembly());
+        
+        // Adding Services
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
 
         var app = builder.Build();
 
