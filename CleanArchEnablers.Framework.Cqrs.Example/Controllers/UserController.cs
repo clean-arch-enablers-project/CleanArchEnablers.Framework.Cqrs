@@ -27,7 +27,7 @@ public class UserController(ICommandDispatcher commandDispatcher, IQueryDispatch
         return Ok(response);
     }
 
-    [HttpGet]
+    [HttpGet("v1/user")]
     public async Task<IActionResult> FetchUsers(CancellationToken cancellationToken)
     {
         var query = new FetchUsersQuery();
