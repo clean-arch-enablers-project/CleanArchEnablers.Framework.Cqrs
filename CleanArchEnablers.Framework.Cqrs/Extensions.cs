@@ -11,7 +11,7 @@ public static class Extensions
     private static IServiceCollection AddCommandsHandlers(this IServiceCollection services, Assembly assembly)
     {
         var commandHandlerTypes = assembly.GetTypes()
-            .Where(t => t.IsClass && !t.IsAbstract && t.GetInterfaces()
+            .Where(t => t is { IsClass: true, IsAbstract: false } && t.GetInterfaces()
                 .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ICommandHandler<,>)))
             .ToList();
 
@@ -33,7 +33,7 @@ public static class Extensions
     private static IServiceCollection AddQueryHandler(this IServiceCollection services, Assembly assembly)
     {
         var queryHandlerTypes = assembly.GetTypes()
-            .Where(t => t.IsClass && !t.IsAbstract && t.GetInterfaces()
+            .Where(t => t is { IsClass: true, IsAbstract: false } && t.GetInterfaces()
                 .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IQueryHandler<,>)))
             .ToList();
 
