@@ -1,4 +1,3 @@
-using CleanArchEnablers.Framework.Cqrs.Example.Application.CreateUser.IO;
 using CleanArchEnablers.Framework.Cqrs.Example.Domain.Entities.Factories;
 using CleanArchEnablers.Framework.Cqrs.Example.Infrastructure.Repositories;
 using CleanArchEnablers.Framework.Cqrs.Handlers;

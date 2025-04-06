@@ -1,5 +1,5 @@
 using CleanArchEnablers.Framework.Cqrs.Dispatchers;
-using CleanArchEnablers.Framework.Cqrs.Example.Application.CreateUser.IO;
+using CleanArchEnablers.Framework.Cqrs.Example.Application.CreateUser;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchEnablers.Framework.Cqrs.Example.Controllers;

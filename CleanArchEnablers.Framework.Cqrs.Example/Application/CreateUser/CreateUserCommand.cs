@@ -1,6 +1,6 @@
 using CleanArchEnablers.Framework.Cqrs.Abstractions;
 
-namespace CleanArchEnablers.Framework.Cqrs.Example.Application.CreateUser.IO;
+namespace CleanArchEnablers.Framework.Cqrs.Example.Application.CreateUser;
 
 public record CreateUserCommand(
     string Email, 
