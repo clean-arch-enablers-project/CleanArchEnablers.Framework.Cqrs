@@ -26,7 +26,7 @@ State Symbol Key:
 
 ## 📚 Key Concepts
 
-<img src="./CleanArchEnablers.Framework.Documentation/cqrs.drawio.png" />
+<img src="./CleanArchEnablers.Utils.Documentation/cqrs.drawio.png" />
 
 ### Command - Queries
 
