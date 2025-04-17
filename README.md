@@ -8,7 +8,7 @@ Welcome to the repository for the open source CAE CQRS Framework!
 ### ▶️ The NuGet Package:
 ```xml
 <ItemGroup>
-    <PackageReference Include="CleanArchEnablers.Framework.Cqrs" Version="${LatestVersion}">
+    <PackageReference Include="CleanArchEnablers.Utils.Cqrs" Version="${LatestVersion}">
 </ItemGroup>
 ```
 
