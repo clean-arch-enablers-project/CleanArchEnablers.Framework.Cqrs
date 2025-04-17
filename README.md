@@ -87,6 +87,21 @@ public class UserController(IQueryDispatcher queryDispatcher)
 }
 ```
 
+## ⚠️ Attention
+
+- To use `Cae.Cqrs`, you need to add on your IServiceCollection.
+
+```csharp
+builder.Services.AddCaeCqrs(Assembly.GetExecutingAssembly());
+```
+
+- `CarCqrs` injects automatically any object implementing `IQueryHandler<,>` or `ICommandHandler<,>`
+
+## 🌐 Other components of the SDK:
+
+- ``✔️`` [CleanArchEnablers.Utils.MappedExceptions](https://github.com/clean-arch-enablers-project/CleanArchEnablers.Utils.MappedExceptions)
+- ``✔️`` [CleanArchEnablers.Utils.Trier](https://github.com/clean-arch-enablers-project/CleanArchEnablers.Utils.Trier)
+
 <br>
 <br>
 <br>
