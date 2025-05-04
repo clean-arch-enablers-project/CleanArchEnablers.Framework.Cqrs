@@ -1,4 +1,4 @@
-# ✔️ CleanArchEnablers.Framework.Cqrs
+# ✔️ CleanArchEnablers.Utils.Cqrs
 C# Microsoft.NET edition
 
 <br>
